@@ -1,0 +1,28 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Modifier une observation{% endblock %}
+{% block h1 %}Modifier une observation{% endblock %}
+
+{% block content %}
+  <style>
+    form p { margin-bottom: 10px; }
+    label { font-weight: 600; display:block; margin-bottom: 4px; }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      box-sizing: border-box;
+    }
+  </style>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer les modifications</button>
+</form>
+
+    <p style="margin-top:20px;">
+      <a href="{% url 'observ_list' %}">← Retour à la liste des observations</a>
+    </p>
+{% endblock %}

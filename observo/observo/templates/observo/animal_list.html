@@ -1,0 +1,33 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Liste des animaux{% endblock %}
+{% block h1 %}Liste des animaux{% endblock %}
+
+{% block content %}
+
+  <p class="subtitle">Nom commun, 20 premiers caractères de la description, et lien vers la fiche détaillée.</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Nom commun</th>
+          <th>Description (20 caractères)</th>
+          <th>Détails</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for animal in animals %}
+        <tr>
+          <td>{{ animal.nom_commun }}</td>
+          <td>{{ animal.description|slice:":20" }}...</td>
+          <td><a class="link" href="{% url 'animal_detail' animal.pk %}">Fiche détaillée</a></td>
+          <td><a class="link" href="{% url 'change_animal' animal.pk %}">Modifier</a>
+          <a class="link" href="{% url 'delete_animal' animal.pk %}">Supprimer</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Ajouter une observation{% endblock %}
+{% block h1 %}Ajouter une observation{% endblock %}
+
+{% block content %}
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer</button>
+  </form>
+
+  <p><a href="{% url 'observ_list' %}">Annuler</a></p>
+{% endblock %}

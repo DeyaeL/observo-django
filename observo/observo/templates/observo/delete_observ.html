@@ -1,0 +1,18 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Supprimer une observation{% endblock %}
+{% block h1 %}Supprimer une observation{% endblock %}
+
+{% block content %}
+  <p>
+    Es-tu sûr de vouloir supprimer définitivement cette observation
+    concernant <strong>{{ observ.animal.nom_commun }}</strong>
+    du {{ observ.date_heure }} ?
+  </p>
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Oui, supprimer</button>
+    <a href="{% url 'observ_list' %}">Annuler</a>
+  </form>
+{% endblock %}

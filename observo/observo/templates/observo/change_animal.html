@@ -1,0 +1,15 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Modifier un animal{% endblock %}
+{% block h1 %}Modifier un animal{% endblock %}
+
+{% block content %}
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table}}
+            </table>
+            <button class="button" type="submit">Modifier</button>
+        </form>
+        <a class="button" href="{% url 'animal_list' %}">Retour </a>
+{% endblock %}

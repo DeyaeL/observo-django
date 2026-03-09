@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title%}Observo{% endblock %}</title>
+    
+    <style>
+    body { font-family: system-ui, Arial, sans-serif; background:#f6f7fb; margin:0; }
+    .container { max-width: 950px; margin: 40px auto; background:#fff; padding: 22px; border-radius: 14px; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+    nav { background:#111827; padding: 12px 18px; }
+    nav a { color:white; text-decoration:none; font-weight:600; margin-right: 14px; }
+    nav a:hover { text-decoration:underline; }
+    .subtitle { color:#6b7280; margin-bottom: 20px; }
+    .table-wrapper { border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; border: none; }
+    thead th { background:#111827; color:white; padding:12px; text-align:left; }
+    tbody td { padding:12px; border-top:1px solid #e5e7eb; }
+    tbody tr:hover { background:#f9fafb; }
+    .link { color:#2563eb; font-weight:600; text-decoration:none; }
+    .link:hover { text-decoration:underline; }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="{% url 'home' %}">Accueil</a>
+    <a href="{% url 'about' %}">À propos</a>
+    <a href="{% url 'animal_list' %}">Animaux</a>
+    <a href="{% url 'observ_list' %}">Observations</a>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'favorite_list' %}">Mes favoris</a>
+        <span>Bonjour {{ user.username }}</span>
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Déconnexion</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">Connexion</a>
+        <a href="{% url 'signup' %}">Inscription</a>
+    {% endif %}
+</nav>
+
+
+    <div class="container">
+        <h1>{% block h1 %}{% endblock %}</h1>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

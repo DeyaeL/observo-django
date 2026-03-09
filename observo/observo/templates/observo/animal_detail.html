@@ -1,0 +1,42 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Détail d'un animal{% endblock %}
+{% block h1 %}{{ animal.nom_commun }}{% endblock %}
+
+{% block content %}
+<style>
+  .subtitle { color:#6b7280; margin-bottom: 18px; }
+  .field { margin-bottom: 8px; }
+  .label { font-weight: 600; }
+</style>
+<p class="subtitle"><em>{{ animal.nom_savant }}</em></p>
+<div class="field">
+  <span class="label">Embranchement :</span> {{ animal.embranchement }}
+</div>
+<div class="field">
+  <span class="label">Classe :</span> {{ animal.classe }}
+</div>
+<div class="field">
+  <span class="label">Ordre :</span> {{ animal.ordre }}
+</div>
+<div class="field">
+  <span class="label">Sous-ordre :</span> {{ animal.sous_ordre }}
+</div>
+<div class="field">
+  <span class="label">Famille :</span> {{ animal.famille }}
+</div>
+<div class="field">
+  <span class="label">Genre :</span> {{ animal.genre }}
+</div>
+<div class="field">
+  <span class="label">Statut IUCN :</span> {{ animal.statut_iucn }}
+</div>
+<div class="field">
+  <span class="label">Description :</span><br>
+  {{ animal.description }}
+</div>
+
+<p style="margin-top:20px;">
+  <a class="link" href="{% url 'animal_list' %}">← Retour à la liste des animaux</a>
+</p>
+{% endblock %}

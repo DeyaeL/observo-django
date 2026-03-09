@@ -1,0 +1,16 @@
+{% if suggestions %}
+  <div class="alert alert-info mt-3">
+    <strong>Espèces probables ici en cette saison :</strong>
+    <ul class="list-group">
+      {% for s in suggestions %}
+        <li class="list-group-item list-group-item-action suggestion-item" data-animal-id="{{ s.id }}">
+          {{ s.nom }} 
+          {% if s.protegee %}<span class="badge bg-danger">Protégée</span>{% endif %}
+          <small>(~{{ s.count }} obs. - score {{ s.score }})</small>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% else %}
+  <div class="alert alert-secondary mt-3">Aucune suggestion disponible pour cette zone.</div>
+{% endif %}

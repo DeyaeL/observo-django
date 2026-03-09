@@ -1,0 +1,162 @@
+ [
+  {
+    "model": "observo.animal",
+    "pk": 1,
+    "fields": {
+      "nom_commun": "Renard roux",
+      "nom_savant": "Vulpes vulpes",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Carnivora",
+      "sous_ordre": "Caniformia",
+      "famille": "Canidae",
+      "genre": "Vulpes",
+      "statut_iucn": "LC",
+      "description": "Canidé très répandu, opportuniste et adaptable. Présent dans de nombreux milieux, des forêts aux zones urbaines."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 2,
+    "fields": {
+      "nom_commun": "Loup gris",
+      "nom_savant": "Canis lupus",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Carnivora",
+      "sous_ordre": "Caniformia",
+      "famille": "Canidae",
+      "genre": "Canis",
+      "statut_iucn": "LC",
+      "description": "Grand canidé social vivant en meutes. Prédateur clé dans de nombreux écosystèmes."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 3,
+    "fields": {
+      "nom_commun": "Lynx boréal",
+      "nom_savant": "Lynx lynx",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Carnivora",
+      "sous_ordre": "Feliformia",
+      "famille": "Felidae",
+      "genre": "Lynx",
+      "statut_iucn": "LC",
+      "description": "Félin discret des forêts, reconnaissable à ses pinceaux de poils sur les oreilles. Chasseur de petits et moyens mammifères."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 4,
+    "fields": {
+      "nom_commun": "Hérisson d'Europe",
+      "nom_savant": "Erinaceus europaeus",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Eulipotyphla",
+      "sous_ordre": "",
+      "famille": "Erinaceidae",
+      "genre": "Erinaceus",
+      "statut_iucn": "LC",
+      "description": "Petit mammifère insectivore protégé par des piquants. Fréquent dans les jardins et lisières."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 5,
+    "fields": {
+      "nom_commun": "Blaireau européen",
+      "nom_savant": "Meles meles",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Carnivora",
+      "sous_ordre": "Caniformia",
+      "famille": "Mustelidae",
+      "genre": "Meles",
+      "statut_iucn": "LC",
+      "description": "Mustélidé fouisseur vivant en groupes dans des terriers. Omnivore, actif surtout la nuit."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 6,
+    "fields": {
+      "nom_commun": "Hibou grand-duc",
+      "nom_savant": "Bubo bubo",
+      "embranchement": "Chordata",
+      "classe": "Aves",
+      "ordre": "Strigiformes",
+      "sous_ordre": "",
+      "famille": "Strigidae",
+      "genre": "Bubo",
+      "statut_iucn": "LC",
+      "description": "Grand rapace nocturne, puissant, occupant falaises et forêts. Se nourrit de mammifères et d'oiseaux."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 7,
+    "fields": {
+      "nom_commun": "Tortue caouanne",
+      "nom_savant": "Caretta caretta",
+      "embranchement": "Chordata",
+      "classe": "Reptilia",
+      "ordre": "Testudines",
+      "sous_ordre": "",
+      "famille": "Cheloniidae",
+      "genre": "Caretta",
+      "statut_iucn": "VU",
+      "description": "Grande tortue marine migratrice. Menacée par les captures accidentelles, la pollution et la dégradation des sites de ponte."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 8,
+    "fields": {
+      "nom_commun": "Panda géant",
+      "nom_savant": "Ailuropoda melanoleuca",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Carnivora",
+      "sous_ordre": "Caniformia",
+      "famille": "Ursidae",
+      "genre": "Ailuropoda",
+      "statut_iucn": "VU",
+      "description": "Ours spécialisé sur le bambou, vivant dans certaines forêts de montagne. Espèce emblématique de conservation."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 9,
+    "fields": {
+      "nom_commun": "Baleine bleue",
+      "nom_savant": "Balaenoptera musculus",
+      "embranchement": "Chordata",
+      "classe": "Mammalia",
+      "ordre": "Artiodactyla",
+      "sous_ordre": "Cetacea",
+      "famille": "Balaenopteridae",
+      "genre": "Balaenoptera",
+      "statut_iucn": "EN",
+      "description": "Plus grand animal vivant connu. Se nourrit principalement de krill. Population affectée historiquement par la chasse."
+    }
+  },
+  {
+    "model": "observo.animal",
+    "pk": 10,
+    "fields": {
+      "nom_commun": "Axolotl",
+      "nom_savant": "Ambystoma mexicanum",
+      "embranchement": "Chordata",
+      "classe": "Amphibia",
+      "ordre": "Urodela",
+      "sous_ordre": "",
+      "famille": "Ambystomatidae",
+      "genre": "Ambystoma",
+      "statut_iucn": "CR",
+      "description": "Amphibien néoténique vivant à l'état larvaire. Très menacé dans son habitat naturel à cause de la pollution et de la perte d'habitat."
+    }
+  }
+]

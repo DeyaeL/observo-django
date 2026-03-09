@@ -1,0 +1,32 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Liste des observations{% endblock %}
+{% block h1 %}Liste des observations{% endblock %}
+
+{% block content %}
+    <p class="subtitle">Animal observé, date, localisation et lien vers la fiche détaillée.</p>
+    
+    <div class="table-wrapper">
+    <table>
+        <tr>
+            <th>Animal</th>
+            <th>Date</th>
+            <th>Localisation</th>
+            <th>Détails</th>
+            <th>Actions</th>
+        </tr>
+        {% for observ in observs %}
+        <tr>
+            <td>{{ observ.animal.nom_commun }}</td>
+            <td>{{ observ.date_heure }}</td>
+            <td>{{ observ.latitude }}, {{ observ.longitude }}</td>
+            <td><a href="{% url 'observ_detail' observ.pk %}">Détails</a></td>
+            <td>
+                <a href="{% url 'change_observ' observ.pk %}">Modifier</a> |
+                <a href="{% url 'observ_delete' observ.pk %}">Supprimer</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

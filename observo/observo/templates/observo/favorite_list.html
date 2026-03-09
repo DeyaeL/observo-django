@@ -1,0 +1,44 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Mes favoris{% endblock %}
+{% block h1 %}Mes animaux favoris{% endblock %}
+
+{% block content %}
+<p class="subtitle">
+    Voici la liste des animaux que vous avez ajoutés en favoris.
+</p>
+
+{% if animals %}
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom commun</th>
+                    <th>Nom savant</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for animal in animals %}
+                <tr>
+                    <td>
+                        <a class="link" href="{% url 'animal_detail' animal.id %}">
+                            {{ animal.nom_commun }}
+                        </a>
+                    </td>
+                    <td>{{ animal.nom_savant }}</td>
+                    <td>
+                        <form action="{% url 'remove_favorite' animal.id %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit">Retirer </button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <p>Vous n'avez encore ajouté aucun animal en favori.</p>
+{% endif %}
+{% endblock %}

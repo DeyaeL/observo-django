@@ -1,0 +1,9 @@
+{% extends "observo/base.html" %}
+
+{% block h1 %}Déconnexion{% endblock %}
+
+{% block content %}
+<p>Vous êtes bien déconnecté.</p>
+
+<a href="{% url 'home' %}">Retour à l’accueil</a>
+{% endblock %}

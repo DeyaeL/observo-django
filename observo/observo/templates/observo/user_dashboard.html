@@ -1,0 +1,35 @@
+{% extends "observo/base.html" %}
+
+{% block title %}Mon tableau de bord{% endblock %}
+{% block h1 %}Mon tableau de bord{% endblock %}
+
+{% block content %}
+  <p>Voici vos observations :</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Animal</th>
+          <th>Date</th>
+          <th>Localisation</th>
+          <th>Détails</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for observ in observs %}
+          <tr>
+            <td>{{ observ.animal.nom_commun }}</td>
+            <td>{{ observ.date_heure }}</td>
+            <td>{{ observ.latitude }}, {{ observ.longitude }}</td>
+            <td><a class="link" href="{% url 'observ_detail' observ.pk %}">Voir</a></td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="4">Aucune observation pour le moment.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
